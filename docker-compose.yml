@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  opsguard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: asr-opsguard
+    restart: unless-stopped
+    volumes:
+      - ./config:/app/config:ro
+    environment:
+      - PYTHONUNBUFFERED=1

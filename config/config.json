@@ -1,0 +1,16 @@
+﻿{
+   monitoring: {
+    interval_seconds: 10,
+    cpu_threshold_percent: 80.0,
+    memory_threshold_percent: 85.0,
+    disk_threshold_percent: 90.0,
+    alert_cooldown_seconds: 60
+  },
+  aws: {
+    mock_mode: true,
+    region_name: us-east-1,
+    sns_topic_arn: arn:aws:sns:us-east-1:123456789012:opsguard-alerts,
+    s3_bucket_name: opsguard-health-logs-archive,
+    cloudwatch_namespace: ASR/OpsGuard
+  }
+}
